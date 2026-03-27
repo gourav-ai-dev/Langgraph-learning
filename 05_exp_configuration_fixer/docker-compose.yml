@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+web
+image: nginx:latest
+ports:
+- "80:80"
+depends_on:
+- backend
+
+backend:
+build: .
+environment:
+- DB_HOST=database
+ports:
+- "5000:5000"
+
+database:
+image: postgres
+environment:
+POSTGRES_USER: user
+POSTGRES_PASSWORD
+volumes:
+- db_data:/var/lib/postgresql/data
+
+volumes
+db_data:

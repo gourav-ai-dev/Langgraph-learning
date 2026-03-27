@@ -1,0 +1,8 @@
+digraph G {
+  "__start__";
+  "increment";
+  "__end__";
+  "__start__" -> "increment";
+  "increment" -> "__end__" [label="end"];
+  "increment" -> "increment" [label="continue"];
+}

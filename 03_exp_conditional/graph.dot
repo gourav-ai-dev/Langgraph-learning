@@ -1,0 +1,15 @@
+digraph G {
+  "__start__";
+  "current_temperature";
+  "increase_temperature";
+  "decrease_temperature";
+  "stable_temperature";
+  "__end__";
+  "__start__" -> "current_temperature";
+  "current_temperature" -> "decrease_temperature" [label="too_hot"];
+  "current_temperature" -> "increase_temperature" [label="too_cold"];
+  "current_temperature" -> "stable_temperature" [label="comfortable"];
+  "decrease_temperature" -> "current_temperature";
+  "increase_temperature" -> "current_temperature";
+  "stable_temperature" -> "__end__";
+}

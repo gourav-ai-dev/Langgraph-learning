@@ -1,0 +1,5 @@
+LangGraph is a framework for building stateful, multi-step AI workflows.
+
+It allows developers to create agents that can think, act, and use tools.
+
+RAG (Retrieval Augmented Generation) helps AI fetch real data instead of guessing.
